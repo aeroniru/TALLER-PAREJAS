@@ -45,6 +45,16 @@ function mostrarClientesOrd(){
     console.log(clientes)
 }
 
+function calcularPromedio(){
+    if(clientes.length===0){
+        console.log("No hay edades registradas")
+        return
+    }
+
+    let sum = clientes.reduce((total,cliente)=>total + cliente.edad,0)
+    console.log(`Promedio de edades: ${(sum/clientes.length).toFixed(2)}`)
+}
+
 band = true;
 while (band) {
 
